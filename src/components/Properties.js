@@ -1,5 +1,5 @@
 import React from 'react'
-import './properties.css'
+import styles from './properties.module.css'
 import Card from 'react-bootstrap/Card'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Stack from 'react-bootstrap/Stack'
@@ -102,7 +102,7 @@ function Properties() {
 
         </Stack>
         </div>
-        <div className="main-content">
+        <div className={styles.maincontent}>
         {
             properties.map(prop => {
                 console.log(prop)
@@ -112,16 +112,16 @@ function Properties() {
                     && (prop['type'] == type || type == 'All')
                     && checkIfInRange(prop['rent'], priceRange)
                 )
-                    return <div className="prop">
+                    return <div className={styles.prop}>
                     <Card>
                     <Card.Img variant="top" src={`${prop.image}`} />
                     <Card.Body>
                         <Card.Title>{prop.name}</Card.Title>
-                        <div className="contents">
+                        <div className={styles.contents}>
                             <HiLocationMarker /> {prop['location']}
                             <p>$ {prop['rent']}</p>
                         </div>
-                        <div className='card-contents'>
+                        <div className={styles.cardcontents}>
                             <p><BiBed /> {prop['bed']} </p>  
                                 
                             <p><FaShower /> {prop['bathroom']}</p>

@@ -1,4 +1,4 @@
-.main-content {
+.maincontent {
     padding-top: 2rem;
     /* display: flex; */
     display: grid;
@@ -13,7 +13,7 @@
     transform: scale(1.1);
 }
 
-.card-contents {
+.cardcontents {
     display: flex;
     width: 100%;
     justify-content: space-between;

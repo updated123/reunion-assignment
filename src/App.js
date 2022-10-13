@@ -1,5 +1,5 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import './app.css';
+import styles from './app.module.css';
 import Properties from './components/Properties';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 function App() {
   return (
     <div>
-       <div className='navbar'>
+       <div className={styles.navbar}>
        <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">Estatery</Navbar.Brand>
@@ -47,7 +47,7 @@ function App() {
          
          
           <div>
-        <div className='login'>
+        <div className={styles.login}>
         <Button variant="light" size="sm">
           Login
         </Button>{' '}
@@ -66,7 +66,7 @@ function App() {
      
     </div>
 
-      <div className='heading'>
+      <div className={styles.heading}>
         <h1>Search properties to rent</h1>
       </div>
       <Properties />
